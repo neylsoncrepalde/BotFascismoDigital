@@ -6,7 +6,6 @@ Bot Fascismo Digital
 """
 from twython import TwythonStreamer, Twython, TwythonError
 import time
-#from random import randint
 from auth import (
     consumer_key,
     consumer_secret,
@@ -50,7 +49,7 @@ class MyStreamer(TwythonStreamer):
                             print(e)
                         except UnicodeEncodeError as e:
                             print(e)
-                        #time.sleep(randint(10, 60))
+                        time.sleep(10)
 
 
 stream = MyStreamer(
